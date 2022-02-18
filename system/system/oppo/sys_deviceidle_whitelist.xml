@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter-conf>
+    <version>20181110</version>
+    <isOpen>1</isOpen>
+    <filter-name>sys_deviceidle_whitelist</filter-name>
+
+    <wl>com.android.providers.downloads</wl>
+    <wl>com.google.android.gms</wl>
+    <wl>com.google.android.gsf</wl>
+    <wl>com.nearme.romupdate</wl>
+    <wl>com.nearme.statistics.rom</wl>
+    <wl>com.oppo.ota</wl>
+    <wl>com.coloros.sau</wl>
+    <wl>com.oppo.market</wl>
+    <wl>com.heytap.market</wl>
+    <wl>com.nearme.gamecenter</wl>
+    <wl>com.heytap.gamecenter</wl>
+    <wl>com.android.browser</wl>
+    <wl>com.heytap.browser</wl>
+    <wl>com.taobao.qianniu</wl>
+    <wl>com.android.email</wl>
+    <wl>com.coloros.mcs</wl>
+    <wl>com.heytap.mcs</wl>
+    <wl>com.coloros.pictorial</wl>
+    <wl>com.heytap.pictorial</wl>
+    <wl>com.coloros.cloud</wl>
+    <wl>com.heytap.cloud</wl>
+    <wl>com.coloros.safecenter</wl>
+    <wl>com.coloros.alarmclock</wl>
+    <wl>com.android.providers.calendar</wl>
+    <wl>com.android.mms</wl>
+
+    <wl>com.tencent.mobileqq</wl>
+    <wl>com.tencent.mm</wl>
+    <wl>com.oppo.im</wl>
+    <wl>com.taobao.qianniu</wl>
+    <wl>com.kuaidi.daijia.driver</wl>
+    <wl>com.sdu.didi.gsui</wl>
+    <wl>com.sdu.didi.gui</wl>
+    <wl>com.duoduo.vip.taxi</wl>
+    <wl>com.ubercab.driver</wl>
+    <wl>net.zdsoft.taxiclient2</wl>
+    <wl>cn.edaijia.android.driverclient</wl>
+    <wl>com.yongche</wl>
+    <wl>com.funcity.taxi.driver</wl>
+    <wl>com.hn.client.driver</wl>
+    <wl>com.joyskim.taxis_driver</wl>
+    <wl>com.anyimob.taxi</wl>
+    <wl>com.eastedge.taxidriverforpad</wl>
+    <wl>com.sankuai.meituan.dispatch.homebrew</wl>
+    <wl>com.baidu.lbs.waimai.baidurideri</wl>
+    <wl>com.alibaba.android.rimet</wl>
+    <wl>com.sankuai.meituan.meituanwaimaibusiness</wl>
+    <wl>me.ele.napos</wl>
+    <wl>com.chinaunicom.registerhelper</wl>
+    <wl>com.mobiletools.systemhelper</wl>
+    <wl>com.coloros.activation</wl>
+    <wl>com.baidu.map.location</wl>
+    <wl>com.amap.android.location</wl>
+    <wl>com.xtc.watch</wl>
+    <wl>com.eg.android.AlipayGphone</wl>
+    <wl>com.coloros.accegamesdk</wl>
+
+    <wl>com.android.contacts</wl>
+    <wl>com.android.providers.contacts</wl>
+    <wl>com.android.calendar</wl>
+    <wl>com.coloros.wirelesssettings</wl>
+    <wl>com.coloros.simsettings</wl>
+    <wl>com.android.providers.telephony</wl>
+    <wl>com.android.cellbroadcastreceiver</wl>
+    <wl>com.coloros.browser</wl>
+    <wl>com.nearme.instant.platform</wl>
+    <wl>com.heytap.instant.platform</wl>
+    <wl>com.nearme.themespace</wl>
+    <wl>com.nearme.themestore</wl>
+    <wl>com.heytap.themestore</wl>
+    <wl>com.oppo.usercenter</wl>
+    <wl>com.heytap.usercenter</wl>
+    <wl>com.oppo.ohome</wl>
+    <wl>com.heytap.smarthome</wl>
+    <wl>com.cttl.testService</wl>
+    <wl>com.cttl.gprsdata</wl>
+    <wl>com.cttl.sendmmsbyjar</wl>
+
+    <weak-whitelist>com.tencent.mobileqq</weak-whitelist>
+    <weak-whitelist>com.tencent.mm</weak-whitelist>
+    <weak-whitelist>com.oppo.im</weak-whitelist>
+
+</filter-conf>

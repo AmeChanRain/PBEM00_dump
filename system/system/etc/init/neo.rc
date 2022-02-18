@@ -1,0 +1,37 @@
+service neo /system/bin/neo
+        class core
+        user system
+        group system readproc inet
+        capabilities SYS_NICE
+        disabled
+        socket neosocket stream 660 system system
+
+on property:sys.boot_completed=1 && property:persist.sys.enable.neo=1
+        start neo
+
+on property:persist.sys.enable.neo=0
+        stop neo
+
+on post-fs-data
+        mkdir /data/system/neuron_system 0777 system system
+        chmod 0777 /data/system/neuron_system
+
+on property:persist.sys.enable.neo=0
+        stop neo
+
+#ifdef VENDOR_EDIT
+#zhoumingjun@swdp2.shanghai 2018/07/19, Add for run the init.oppo.kneuron.sh on property
+on boot
+    service kneuron_context /system/bin/sh /system/etc/init.oppo.kneuron.sh
+    user root
+    disabled
+    oneshot
+    seclabel u:r:rutilsdaemon:s0
+
+on property:persist.sys.enable.kneuron=*
+    start kneuron_context
+
+#shiguang.han@Swdp.shanghai, 2017/5/23 Add for elsa
+on boot
+    chmod 0755 /dev/cpuset
+#endif

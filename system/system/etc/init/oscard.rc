@@ -1,0 +1,12 @@
+service oscard /system/bin/oscard
+	class hal
+	user system
+	group system readproc root
+	disabled
+
+on property:sys.boot_completed=1 && property:persist.sys.enable.oscar=0
+	stop oscard
+
+on property:sys.boot_completed=1 && property:persist.sys.enable.oscar=1
+	start oscard
+

@@ -1,0 +1,19 @@
+service media-resource-travel-fbe /system/bin/self-init-system travel_media_resource_fbe
+    user root
+    oneshot
+    disabled
+    seclabel u:r:rutilsdaemon:s0
+
+service set-channel-handler /system/bin/self-init-system deal_with_channle_property
+    user root
+    oneshot
+    disabled
+    seclabel u:r:rutilsdaemon:s0
+
+on property:ro.oppo.setchannel=1
+   start set-channel-handler
+
+on property:vold.fbe.decrypted=1
+   start media-resource-travel-fbe
+   start media-resource-reconciliation
+
