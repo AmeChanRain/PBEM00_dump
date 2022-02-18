@@ -1,0 +1,3 @@
+com.baidu.input_oppo
+com.sohu.inputmethod.sogouoem
+com.android.nfc

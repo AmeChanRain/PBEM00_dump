@@ -1,0 +1,14 @@
+service hypnusd /system/bin/hypnusd
+	class main
+	user system
+	group system readproc root
+	capabilities SYS_NICE
+	disabled
+
+on property:sys.boot_completed=1 && property:persist.sys.hypnus.daemon.enable=0
+	stop hypnusd
+
+on property:sys.boot_completed=1 && property:persist.sys.hypnus.daemon.enable=1
+	start hypnusd
+
+chown system system /dev/hypnus

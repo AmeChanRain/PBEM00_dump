@@ -1,0 +1,2 @@
+com.sohu.inputmethod.sogouoem
+com.iflytek.inputmethod.oppo
