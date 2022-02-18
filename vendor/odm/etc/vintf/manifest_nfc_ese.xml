@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* *****************************************************************************
+** File: manifest_nfc_ese.xml
+** VENDOR_EDIT
+** Copyright (C), 2018, Realme Mobile Comm Corp., Ltd
+**
+** Description:
+**       secure_element and nfc hal interface for NFC module
+**
+** Version: 1.0
+** Date created: 14:30:00, 2018/12/19
+** Author: longzuming@realme.com
+** TAG: RM.CN.NFC.Hardware.1704058
+** ******************************* Revision History: ***************************
+**         <author>                <date>            <desc>
+**        Long Zuming            2018/12/19          create
+** *****************************************************************************
+*/
+-->
+<manifest version="1.0" type="device">
+    <!--UICC secure element -->
+    <hal format="hidl">
+        <name>android.hardware.secure_element</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ISecureElement/SIM1</fqname>
+        <fqname>@1.0::ISecureElement/SIM2</fqname>
+        <fqname>@1.1::ISecureElement/eSE1</fqname>
+    </hal>
+
+    <!-- NFC HAL service -->
+    <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.2::INfc/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.nxpnfc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INxpNfc/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.nxpese</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INxpEse</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INxpEse/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.eventprocessor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INxpEseEvtProcessor</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INxpEseEvtProcessor/default</fqname>
+    </hal>
+    <!-- #ifndef VENDOR_EDIT -->
+    <!-- Bao.Lei@CN.NFC.Basic.Hardware,2656434, 2019/12/27 -->
+    <!-- remove for IEsePowerManager HIDL, not needed -->
+    <!--eSE Powermanager-->
+    <!--
+    <hal format="hidl">
+        <name>vendor.qti.esepowermanager</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IEsePowerManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IEsePowerManager/default</fqname>
+    </hal>
+    -->
+    <!-- #endif VENDOR_EDIT -->
+</manifest>
